@@ -1,5 +1,5 @@
 package go_say_hello
 
-func SayHello() string {
-	return "hello versi 1.5.0"
+func SayHello(name string) string {
+	return "hello versi 3.0.0" + name
 }

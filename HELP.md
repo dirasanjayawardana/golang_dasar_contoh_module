@@ -25,3 +25,17 @@
 ## Upgrade Module
 - Untuk upgrade module, cukup commit perubahan dan membuat tag baru di Git, contoh `git tag v2.0.0`
 - Kemudian push `git push origin v2.0.0`
+
+## Upgrade Dependency
+### Minor update (1.x.x)
+- Untuk upgrade versi dependency terbaru, dengan mengubah isi go.mod dengan tag terbaru
+- Contohnya `require github.com/dirasanjayawardana/golang_dasar_contoh_module v1.5.0`
+- Kemudian jalankan `go get`
+
+### Major Update (x.0.0)
+- Major update biasanya terjadi karena ada perubahan pada isi kode program module
+- Sehingga tidak backward compatible (tidak compatible dengan versi sebelumnya)
+- Untuk melakukan upgrade major, strategi terbaiknya adalah merubah nama module pada project library nya
+- contoh `module github.com/dirasanjayawardana/golang_dasar_contoh_module` menjadi `module github.com/dirasanjayawardana/golang_dasar_contoh_module/v2`
+- Kemudian commit dan buat tag dengan versi `vx.0.0` contohnya `v2.0.0`
+- Kemudian untuk menggunakannya, hapus module sebelumnya pada go.mod, kemudian `go get github.com/dirasanjayawardana/golang_dasar_contoh_module/v2`
